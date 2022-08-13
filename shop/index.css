@@ -1,0 +1,124 @@
+/* First section */
+
+main section:first-of-type {
+    background-color: white;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 5px;
+}
+
+main h1 {
+    font-size: 2rem;
+}
+
+/* Second section */
+main section:nth-child(2) {
+    display: flex;
+    /*justify-content: space-between;*/
+    margin: 1%;
+    background-color: white;
+}
+
+
+@media screen and (max-width: 1280px) {
+    main section:nth-child(2) {
+        flex-flow: row wrap;
+    }
+
+    aside#highlightedProducts {
+        width: 100%;
+    }
+}
+
+/* Articles */
+
+.articleContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(265px, 1fr));
+    gap: 2rem;
+}
+
+.articleImage {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+}
+
+.articleImage img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px 20px 0 0;
+
+}
+
+.articleCard {
+    background: white;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.articleCard:hover {
+    box-shadow: 0 4px 20px 0 rgba(34, 68, 123, 0.2);
+    cursor: pointer;
+}
+
+.articleContent {
+    padding: 2rem;
+}
+
+.articleContent .cardTitle {
+    margin: 1rem 0;
+    color: #22447b;
+
+}
+
+.articleContent .cardDesc {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: #6b82a7;
+    margin: 0;
+
+}
+
+@media screen and (min-width: 768px) {
+
+    .articleCard {
+        display: grid;
+        grid-template-rows: 220px 1fr;
+    }
+
+
+}
+
+@media screen and (max-width: 320px) {
+    .articleContainer {
+        grid-template-columns: none;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    /* In case more elements are added to the front page */
+    .articleContainer {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .articleCard {
+        flex: 0 1 30%;
+    }
+
+
+}
+
+/* Left aside */
+aside#highlightedProducts {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+}

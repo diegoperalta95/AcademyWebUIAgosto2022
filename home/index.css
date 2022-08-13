@@ -52,24 +52,23 @@
 }
 
 @media screen and (min-width: 768px) {
-    main {
-        max-width: 608px;
-
-    }
 
     .articleCard {
         display: grid;
         grid-template-rows: 220px 1fr;
     }
 
+
+}
+
+@media screen and (max-width: 320px) {
+    #articleContainer {
+        grid-template-columns: none;
+    }
 }
 
 @media screen and (min-width: 1280px) {
 
-    main {
-        max-width: 1156px;
-    }
-    
     /* In case more elements are added to the front page */
     #articleContainer {
         display: flex;
@@ -77,12 +76,12 @@
         flex-direction: row;
         flex-wrap: wrap;
     }
-    
+
     .articleCard {
         flex: 0 1 30%;
     }
-    
-    
+
+
 }
 
 /* About Section */
@@ -92,6 +91,7 @@
     background-color: white;
     padding: 1rem;
     text-align: center;
+    border-radius: 5px;
 }
 
 #about h1 {

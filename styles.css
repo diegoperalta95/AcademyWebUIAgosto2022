@@ -16,13 +16,28 @@ body {
 
 main {
     margin: 2rem auto;
-    max-width: calc(100%-80px);
+    max-width: calc(100% - 80px);
 }
 
 main h1 {
     text-align: center;
     margin: 3% 0 3% 0;
 }
+
+@media screen and (min-width: 768px) {
+    main {
+        max-width: 608px;
+
+    }
+}
+
+@media screen and (min-width: 1280px) {
+
+    main {
+        max-width: 1156px;
+    }
+}
+
 
 
 /* Header */
