@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Carts List</title>
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><img src="../imgs/misc/logo.png" id="logo" alt="logo"></a>
+        <nav>
+            <ul class="nav_link">
+                <li><a href="../home/index.html">Home</a></li>
+                <li><a href="../shop/index.html">Shop</a></li>
+                <li><a href="../cart/index.html">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="contenedor">
+        <div class="slctCrtUsr">
+            <a>1. Shopping Cart</a>
+            <a>2. Select or Create User</a>
+            <a>3. Payment Options</a>
+        </div>
+        <div id="cartsByUser">
+            <div id="cartsList">
+                <div>
+                    <h2>Carts List</h2>
+                    <div>
+                        <table>
+                            <thead>
+                                <tr class="table_row">
+                                    <th id="tImage">Imagen</th>
+                                    <th id="tNombre">Nombre</th>
+                                    <th id="tDesc">Descripcion</th>
+                                    <th id="tPrice">Precio</th>
+                                    <th id="tCant">Cantidad</th>
+                                </tr>
+                            </thead>
+                            <tbody id="cart">
+                                <tr class="table_columns" style="outline: 1px solid black">
+                                    <td> <img src="../imgs/productPlaceholder.jpg"></td>
+                                    <td>
+                                        <p>Product Name</p>
+                                    </td>
+                                    <td>
+                                        <p>Product Description</p>
+                                    </td>
+                                    <td>
+                                        <spam>$230</spam>
+                                    </td>
+                                    <td>
+                                        <spam>1</spam>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <select name="selectUsers" id="selectUsers">
+                <option class="class_users" default>Select User</option>
+            </select>
+        </div>
+    </div>
+
+    <footer>
+        <h3>© Copyright 2022 / WebUIAcademyAgosto2022</h3>
+
+        <ul class="navigation">
+            <li><a href="../home/index.html">Inicio</a></li>
+            <li><a href="#">Acerca de</a></li>
+            <li><a href="../shop/index.html">Tienda</a></li>
+            <li><a href="#">Ayuda</a></li>
+        </ul>
+    </footer>
+    <script src="index.js"></script>
+</body>
+
+</html>

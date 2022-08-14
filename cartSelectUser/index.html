@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="index.css">
+    <title>Select user for Cart</title>
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><img src="../imgs/misc/logo.png" id="logo" alt="logo"></a>
+        <nav>
+            <ul class="nav_link">
+                <li><a href="../home/index.html">Home</a></li>
+                <li><a href="../shop/index.html">Shop</a></li>
+                <li><a href="../cart/index.html">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main role="main">
+        <div class="slctCrtUsr">
+            <a>1. Shopping Cart</a>
+            <a>2. Select or Create User</a>
+            <a>3. Payment Options</a>
+        </div>
+        <div class="infoContainer">
+            <div class="cnt-form-summary">
+                <h2>Detalles de usuario</h2>
+                <div class="tab">
+                    <button class="tablinks active" id="tabCreateUser" onclick="openTab(event, 'createUser')">Create
+                        User</button>
+                    <button class="tablinks" id="tabSelectUser" onclick="openTab(event, 'selectUser')">Select
+                        User</button>
+                </div>
+                <div id="createUser" class="tabcontent" style="display:inline-block">
+                    <form id="userForm">
+                        <div>
+                            <input type="text" id="fname" name="fname" placeholder="First name">
+                            <input type="text" id="lname" name="lname" placeholder="Last name">
+                        </div>
+                        <input type="text" id="address" name="address" placeholder="Address">
+                        <input type="text" id="avatarUrl" name="avatarUrl" placeholder="Avatar URL">
+                        <div>
+                            <select name="country" id="country">
+                                <option value="Uruguay" selected>Uruguay</option>
+                                <option value="USA">USA</option>
+                            </select>
+                            <input type="text" id="city" name="city" placeholder="City">
+                        </div>
+                        <input type="text" id="pNumber" name="pNumber" placeholder="Phone Number">
+                    </form>
+                </div>
+
+                <div id="selectUser" class="tabcontent">
+                    <h3>Seleccione un usuario</h3>
+                    <select name="sltUser" id="sltUser">
+                        <option value="" default>Seleccione un usuario</option>
+                    </select>
+                </div>
+
+            </div>
+            <div>
+                <h2 id="resumen">Resumen</h2>
+                <div class="summary">
+                    <table id="productsPreview">
+                        <tr>
+                            <td><img src="../imgs/productPlaceholder.jpg" alt=""></td>
+                            <td>Product 1</td>
+                            <td>UYU 130</td>
+                        </tr>
+                        <tr>
+                            <td><img src="../imgs/productPlaceholder.jpg" alt=""></td>
+                            <td>Product 2</td>
+                            <td>UYU 998</td>
+                        </tr>
+                        <tr>
+                            <td><img src="../imgs/productPlaceholder.jpg" alt=""></td>
+                            <td>Product 3</td>
+                            <td>UYU 320</td>
+                        </tr>
+                </div>
+                <table class="space">
+                    <tr class="subtotal">
+                        <th>Subtotal</th>
+                        <th></th>
+                        <th>$<span id="subTotalNum"></span></th>
+                    </tr>
+                    <tr>
+                        <th>Shipping</th>
+                        <th></th>
+                        <th>Free</th>
+                    </tr>
+                    <tr>
+                        <th>Tax</th>
+                        <th></th>
+                        <th>$<span id="taxNum">50</span></th>
+                    </tr>
+                    <tr>
+                        <th>Total</td>
+                        <th></th>
+                        <th>$<span id="totalNum"></span></th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        </div>
+        <div class="buttonNxtCnl">
+            <button type="submit" id="siguiente" onclick='nextPage();'>Siguiente</button>
+            <button type="submit" id="cancelar" onclick="history.back()">Cancelar</button>
+        </div>
+    </main>
+    <footer>
+        <h3>© Copyright 2022 / WebUIAcademyAgosto2022</h3>
+
+        <ul class="navigation">
+            <li><a href="../home/index.html">Inicio</a></li>
+            <li><a href="#">Acerca de</a></li>
+            <li><a href="../shop/index.html">Tienda</a></li>
+            <li><a href="#">Ayuda</a></li>
+        </ul>
+    </footer>
+    <script src="index.js"></script>
+</body>
+
+</html>

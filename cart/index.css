@@ -1,0 +1,247 @@
+/*Contenedor de la pagina*/
+
+.contenedor {
+    max-width: 1200px;
+    margin: 0px auto;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*Estilo para las secciones del carrito*/
+
+.slctCrtUsr {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    cursor: pointer;
+    flex-flow: row wrap;
+    width: 100%;
+    text-align: center;
+    padding: 0 2%;
+}
+
+/*Media query de las secciones*/
+@media (max-width: 600px) {
+    .slctCrtUsr {
+        flex-direction: column;
+    }
+}
+
+/*Estilo carrito de compras y resumen*/
+
+.productContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.products h2 {
+    margin-bottom: 5%;
+}
+
+#summary h2 {
+    margin-bottom: 15%;
+}
+
+/*Ajustar la tabla para responsive*/
+@media (max-width: 600px) {
+
+    table {
+        width: 100%;
+        font-size: 0.7rem;
+    }
+
+    table img {
+        max-width: 100%;
+    }
+
+    table th#tDesc {
+        width: 30px;
+    }
+
+    .products h2 {
+        text-align: center;
+    }
+}
+
+@media (max-width: 1024px) {
+    #summary {
+        border-left: none !important;
+    }
+
+}
+
+.coupon {
+    display: flex;
+    justify-content: end;
+    margin-right: 61px;
+    margin-top: 20px;
+
+}
+
+#couponField input {
+    padding: 2% 2%;
+}
+
+/*Estilo de producto*/
+
+.products {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product td {
+
+    padding: 0px 10px;
+    text-align: center;
+}
+
+.product button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.product #mas, .product #menos {
+    width: 25px;
+}
+
+.product input {
+    width: 25px;
+    border: none;
+    outline: none;
+    text-align: center;
+}
+
+.product img {
+    width: 80px;
+}
+
+/*Sacar las arrow de los input*/
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+/*Botones de eliminar productos*/
+
+.deleteItem {
+    width: 41px;
+    height: 40px;
+    background-color: red;
+    border-radius: 5%;
+}
+
+.deleteItem:hover {
+    background-color: rgb(158, 4, 4);
+}
+
+.deleteItem svg {
+    background-color: transparent;
+    width: 30px;
+    color: white;
+}
+
+/*Estilo de resumen de compra*/
+
+#summary {
+    display: block;
+    align-items: center;
+    border-left: 1px solid rgb(187, 187, 187);
+    padding: 0 .9em .8em .6em;
+    margin-left: 4%;
+}
+
+#summary p {
+    margin-left: 100px;
+}
+
+#summary div {
+    padding-bottom: .5em;
+    padding-top: .5em;
+    border-bottom: 1px solid lightgray;
+    font-size: .9em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#summary span {
+    font-size: 17px;
+}
+
+#summary div:last-child {
+    font-size: 1.5em;
+}
+
+
+#cuponField {
+    outline: none;
+    border: none;
+}
+
+/*Estilo botones next y cancel*/
+
+.buttonNxtCnl {
+    display: flex;
+    justify-content: center;
+}
+
+.buttonNxtCnl button {
+    margin-right: 20px;
+    border-radius: 5px;
+    padding: 10px 20px;
+    background-color: black;
+    color: rgb(255, 255, 255);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+}
+
+.buttonNxtCnl button:hover {
+    background: rgb(20, 20, 20);
+}
+
+
+.disabledButton, .disabledButton:hover {
+    background-color: gray !important;
+    cursor: default;
+}
+
+/*Coupon input*/
+
+#couponInput {
+    border-radius: .25rem;
+    border: none;
+    outline: none;
+    color: #495057;
+}
+
+.valid {
+    box-shadow: 0 0 0 .2rem rgba(40, 167, 69, .50);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: center right calc(.375em + .1875rem);
+    background-size: calc(.75em + .375rem) calc(.75em + .375rem);
+    background-color: #e9ecef;
+    opacity: 1;
+    border-color: #28a745;
+}
+
+.invalid {
+    box-shadow: 0 0 0 .2rem rgba(220, 53, 69, .25);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23dc3545' viewBox='-2 -2 7 7'%3e%3cpath stroke='%23dc3545' d='M0 0l3 3m0-3L0 3'/%3e%3ccircle r='.5'/%3e%3ccircle cx='3' r='.5'/%3e%3ccircle cy='3' r='.5'/%3e%3ccircle cx='3' cy='3' r='.5'/%3e%3c/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center right calc(.375em + .1875rem);
+    background-size: calc(.75em + .375rem) calc(.75em + .375rem);
+    opacity: 1;
+    border-color: #dc3545;
+
+}

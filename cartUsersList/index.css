@@ -1,0 +1,80 @@
+/*contenedor de la pagina*/
+
+.contenedor {
+    max-width: 1200px;
+    margin: 0px auto;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*Estilo para las secciones del carrito*/
+
+.slctCrtUsr {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    cursor: pointer;
+    flex-flow: row wrap;
+    width: 100%;
+    text-align: center;
+    padding: 0 2%;
+}
+
+/*Media query de las secciones*/
+@media (max-width: 600px) {
+    .slctCrtUsr {
+        flex-direction: column;
+    }
+}
+
+#cartsByUser {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 4% 0 4% 0;
+    align-items: flex-start
+}
+
+#cartsList {
+    list-style: none;
+}
+
+#cartsList img {
+    width: 100px;
+}
+
+#selectUsers {
+    border-radius: 4px;
+    padding: 6px;
+}
+
+#cartID {
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.cart {
+    display: flex;
+    justify-content: start;
+    text-align: start;
+    margin: 1% 0;
+}
+
+.cartDescription {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    text-align: start;
+    padding: 1em;
+}
+
+.table_row th {
+    padding: 15px;
+}
+
+.table_columns td {
+    padding: 15px;
+}
+
+table {
+    max-width: 1000px;
+}
